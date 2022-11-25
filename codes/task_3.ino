@@ -4,8 +4,6 @@
 // Encoder output to Arduino Interrupt pin. Tracks the pulse count.
 #define ENC_IN_RIGHT_A 3
 
-
-
 // Ultrasonic 
 int servopin=9;// digital 9 is connected to servo signal pin
 int myangle;// define the angle
@@ -44,8 +42,8 @@ void loop()
    if(a>20){
     forward(15);
     delay(100);
-    a1 = sr04.Distance();
-    Serial.println(a1);
+    a = sr04.Distance();
+    Serial.println(a);
    }
    if(a<20)    // whether the distance a is less than 15cm, if yes, then perform the program in the brace.
    {

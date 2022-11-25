@@ -14,7 +14,7 @@ int pulsewidth;// define the pulsewidth
 #define TRIG_PIN 4   // define the pin ting of ultrasonic as D12
 #define ECHO_PIN 5   //define the pin echo of ultrasonic as D13
 SR04 sr04 = SR04(ECHO_PIN,TRIG_PIN);    // build the ultrasonic object to control the ultrasonic 
-long a,a1,a2;      // used to receive the distance measured by ultrasonic 
+long a;      // used to receive the distance measured by ultrasonic 
 
 // Keep track of the number of right wheel pulses
 volatile long right_wheel_pulse_count = 0;

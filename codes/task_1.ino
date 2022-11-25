@@ -3,8 +3,6 @@
 const int RECV_PIN = 7;
 IRrecv irrecv(RECV_PIN);
 decode_results results;
-unsigned long key_value = 0;
-int car_dir;
 
 void setup(){
   Serial.begin(9600);
@@ -45,14 +43,12 @@ void forward(){
 
 void left()
 {
-  car_dir = 2;
   analogWrite(11,0);
   analogWrite(12,255);
 }
 
 void right()
 {
-  car_dir = 3;
   analogWrite(11,255);
   analogWrite(12,0);
 }
